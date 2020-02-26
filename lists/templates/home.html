@@ -1,13 +1,15 @@
 <h1>Calculator</h1>
+ <calculator>
    <form action="operate" method="post">
     {% csrf_token %}
-       <p>Enter a 1st number: <input type="text" name="num1"  placeholder="enter the number"></p>
+       <first_box><p>Enter a 1st number: <input type="text" name="num1"  placeholder="enter the number" id="first_textbox"></p></first_box>
 
-       <p> Enter a 2nd number: <input type="text" name="num2" placeholder="enter the number"></p>
-          <button type="submit" name="add">ADD</button>
-          <button type="submit" name="sub">SUB</button>
-          <button type="submit" name="mul">MUL</button>
-          <button type="submit" name="div">DIV</button>
-       Your Result : {{result}}
+       <second_box><p> Enter a 2nd number: <input type="text" name="num2" placeholder="enter the number" id="second_textbox"></p></second_box>
+          <button type="submit" name="add" id="add">ADD</button>
+          <button type="submit" name="sub" id="sub">SUB</button>
+          <button type="submit" name="mul" id="mul">MUL</button>
+          <button type="submit" name="div" id="div">DIV</button>
+       <result> Your Result : {{result}} </result>
 
    </form>
+ </calculator>
