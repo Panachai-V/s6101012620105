@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculator</title>
-</head>
-<body>
-<h1>Calculator</h1>
-X : <input type="text" id="X" name="X"><br><br>
-Y : <input type="text" id="Y" name="Y"><br><br>
-<input type="button" value="+" onclick="msg()">
-<input type="button" value="-" onclick="msg()">
-<input type="button" value="*" onclick="msg()">
-<input type="button" value="/" onclick="msg()">
-<h2>Your Result : </h2>
-</body>
-</html>
+<h1>hello {{name}} !!!!</h1>
+   <form action="add" method="post">
+    {% csrf_token %}
+                Enter a 1st number: <input type="text" name="num1"  placeholder="enter the number"></n>
+                Enter a 2nd number: <input type="text" name="num2" placeholder="enter the number">
+                <input type="submit"></n>
+       {{result}}
+
+            </form>

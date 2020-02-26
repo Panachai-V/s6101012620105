@@ -20,4 +20,5 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^$', views.home_page, name='home'),
+    url('add', views.add, name='add')
 ]
