@@ -20,6 +20,6 @@ def operate(request):
         elif 'mul' in request.POST:
             res = val1 * val2
             return render(request,'home.html',{'result': res})
-        # elif 'div' in request.POST:
-        #     res = val1 / val2
-        #     return render(request,'home.html',{'result': res})
+        elif 'div' in request.POST:
+            res = val1 / val2
+            return render(request,'home.html',{'result': res})
