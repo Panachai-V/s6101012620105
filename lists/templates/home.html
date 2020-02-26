@@ -2,9 +2,9 @@
  <calculator>
    <form action="operate" method="post">
     {% csrf_token %}
-       <first_box><p>Enter a 1st number: <input type="text" name="num1"  placeholder="enter the number" id="first_textbox"></p></first_box>
+       <first_box><p>Enter a 1st number: <input type="text" name="num1"  placeholder="enter the number" required id="first_textbox" ></p></first_box>
 
-       <second_box><p> Enter a 2nd number: <input type="text" name="num2" placeholder="enter the number" id="second_textbox"></p></second_box>
+       <second_box><p> Enter a 2nd number: <input type="text" name="num2" placeholder="enter the number" required id="second_textbox" ></p></second_box>
           <button type="submit" name="add" id="add">ADD</button>
           <button type="submit" name="sub" id="sub">SUB</button>
           <button type="submit" name="mul" id="mul">MUL</button>
