@@ -23,3 +23,6 @@ def operate(request):
         elif 'div' in request.POST:
             res = val1 / val2
             return render(request,'home.html',{'result': res})
+        else:
+            res = "You should input number"
+            return render(request, 'home.html', {'result': res})
