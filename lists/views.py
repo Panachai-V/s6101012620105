@@ -14,9 +14,9 @@ def operate(request):
         if 'add' in request.POST:
             res = val1 + val2
             return render(request,'home.html',{'result': res})
-        # elif 'sub' in request.POST:
-        #     res = val1 - val2
-        #     return render(request,'home.html',{'result': res})
+        elif 'sub' in request.POST:
+            res = val1 - val2
+            return render(request,'home.html',{'result': res})
         # elif 'mul' in request.POST:
         #     res = val1 * val2
         #     return render(request,'home.html',{'result': res})
