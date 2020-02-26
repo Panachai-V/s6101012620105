@@ -11,9 +11,9 @@ def operate(request):
     if request.method == 'POST':
         val1 = float(request.POST['num1'])
         val2 = float(request.POST['num2'])
-        # if 'add' in request.POST:
-            # res = val1 + val2
-            # return render(request,'home.html',{'result': res})
+        if 'add' in request.POST:
+            res = val1 + val2
+            return render(request,'home.html',{'result': res})
         # elif 'sub' in request.POST:
         #     res = val1 - val2
         #     return render(request,'home.html',{'result': res})
