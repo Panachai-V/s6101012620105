@@ -1,6 +1,6 @@
-<h1>Calculator</h1>
+<h1>Calculator by POST</h1>
  <calculator>
-   <form action="operate" method="post">
+   <form action="operate_post" method="post">
     {% csrf_token %}
        <first_box><p>Enter a 1st number: <input type="number" name="num1"  placeholder="enter the number" required id="first_textbox"></p></first_box>
 

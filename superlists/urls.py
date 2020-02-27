@@ -20,5 +20,8 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^$', views.home_page, name='home'),
-    url('operate', views.operate, name='operate')
+    url(r'home_GET.html', views.home_GET, name='home_POST'),
+    url(r'home_POST.html', views.home_POST, name='home_GET'),
+    url('operate_get', views.operate_get, name='operate_get'),
+    url('operate_post', views.operate_post, name='operate_post')
 ]
