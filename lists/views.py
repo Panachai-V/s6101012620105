@@ -54,22 +54,22 @@ def operate_get(request):
             op = '+'
             get_his.objects.create(x_value = val1, y_value = val2, op_value =op, res_value = res)
             get_his_list = get_his.objects.all()
-            return render(request,'home_POST.html',{'result': get_his_list})
+            return render(request,'home_GET.html',{'result': get_his_list})
         elif 'sub' in request.POST:
             res = val1 - val2
             op = '-'
             get_his.objects.create(x_value=val1, y_value=val2, op_value=op, res_value=res)
-            get_his_list = post_his.objects.all()
-            return render(request,'home_POST.html',{'result': get_his_list})
+            get_his_list = get_his.objects.all()
+            return render(request,'home_GET.html',{'result': get_his_list})
         elif 'mul' in request.POST:
             res = val1 * val2
             op = '*'
             get_his.objects.create(x_value=val1, y_value=val2, op_value=op, res_value=res)
-            get_his_list = post_his.objects.all()
-            return render(request,'home_POST.html',{'result': get_his_list})
+            get_his_list = get_his.objects.all()
+            return render(request,'home_GET.html',{'result': get_his_list})
         elif 'div' in request.POST:
             res = val1 / val2
             op = '/'
             get_his.objects.create(x_value=val1, y_value=val2, op_value=op, res_value=res)
             get_his_list = get_his.objects.all()
-            return render(request,'home_POST.html',{'result': get_his_list})
+            return render(request,'home_GET.html',{'result': get_his_list})
