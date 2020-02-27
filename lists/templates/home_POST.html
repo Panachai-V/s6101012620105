@@ -1,0 +1,23 @@
+<h1>Calculator</h1>
+ <calculator>
+   <form action="operate" method="post">
+    {% csrf_token %}
+       <first_box><p>Enter a 1st number: <input type="number" name="num1"  placeholder="enter the number" required id="first_textbox"></p></first_box>
+
+       <second_box><p> Enter a 2nd number: <input type="number" name="num2" placeholder="enter the number" required id="second_textbox"></p></second_box>
+          <button type="submit" name="add" id="add">ADD</button>
+          <button type="submit" name="sub" id="sub">SUB</button>
+          <button type="submit" name="mul" id="mul">MUL</button>
+          <button type="submit" name="div" id="div">DIV</button>
+       </form>
+       <result> Your Result : {{res}} </result>
+       <table>
+           {% for cal_his_list in result %}
+            <tr>
+                <td> {{cal_his_list.x_value}} {{cal_his_list.op_value}} {{cal_his_list.y_value}}</td>
+                <td>  = </td>
+                <td>{{cal_his_list.res_value}}</td>
+            </tr>
+         {% endfor %}
+       </table>
+ </calculator>
