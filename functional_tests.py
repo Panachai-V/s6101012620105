@@ -66,11 +66,10 @@ class NewVisitorTest(unittest.TestCase):
         # เข้ากุปปุ่ม add
         add_button = self.browser.find_element_by_id("mul")
         add_button.click()
-        time.sleep(3)
         # เขาเห็นผลลัพธ์มีค่าเท่ากับ 5
         result_text = self.browser.find_element_by_tag_name('result').text
         self.assertIn('Your Result : 25.0', result_text)
-        time.sleep(3)
+
 
         # เขาต้องการหารเลข
         # เขาใส่เลขไปในช่องที่ 1
@@ -82,7 +81,6 @@ class NewVisitorTest(unittest.TestCase):
         # เข้ากุปปุ่ม add
         add_button = self.browser.find_element_by_id("div")
         add_button.click()
-        time.sleep(3)
         # เขาเห็นผลลัพธ์มีค่าเท่ากับ 5
         result_text = self.browser.find_element_by_tag_name('result').text
         self.assertIn('Your Result : 20.0', result_text)
@@ -98,7 +96,7 @@ class NewVisitorTest(unittest.TestCase):
         # เขาสังเกตุว่าชื่อเว็บจะมีคำว่า calculator
         self.assertIn('', self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
-        self.assertIn('CCalculator by GET', header_text)
+        self.assertIn('Calculator by GET', header_text)
 
         # เขาเห็นช่องสำหรับใส่ค่าเข้าไป
         first_box = self.browser.find_element_by_tag_name('first_box').text
@@ -146,11 +144,9 @@ class NewVisitorTest(unittest.TestCase):
         # เข้ากุปปุ่ม add
         add_button = self.browser.find_element_by_id("mul")
         add_button.click()
-        time.sleep(3)
         # เขาเห็นผลลัพธ์มีค่าเท่ากับ 5
         result_text = self.browser.find_element_by_tag_name('result').text
         self.assertIn('Your Result : 25.0', result_text)
-        time.sleep(3)
 
         # เขาต้องการหารเลข
         # เขาใส่เลขไปในช่องที่ 1
@@ -162,7 +158,6 @@ class NewVisitorTest(unittest.TestCase):
         # เข้ากุปปุ่ม add
         add_button = self.browser.find_element_by_id("div")
         add_button.click()
-        time.sleep(3)
         # เขาเห็นผลลัพธ์มีค่าเท่ากับ 5
         result_text = self.browser.find_element_by_tag_name('result').text
         self.assertIn('Your Result : 20.0', result_text)
